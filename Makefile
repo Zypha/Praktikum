@@ -1,13 +1,14 @@
-all: build/main.pdf
+all: build/GraphDarst.pdf
 
 # hier Python-Skripte:
-build/plot.pdf: plot.py matplotlibrc header-matplotlib.tex | build
-	TEXINPUTS=$$(pwd): python plot.py
+#build/plot.pdf: plot.py matplotlibrc header-matplotlib.tex | build
+#	TEXINPUTS=$$(pwd): python plot.py
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/plot.pdf
+#build/GraphDarst.pdf: build/plot.pdf
 
-build/main.pdf: FORCE | build
+
+build/GraphDarstAufg1.pdf: FORCE | build
 	  TEXINPUTS=build: \
 	  BIBINPUTS=build: \
 	  max_print_line=1048576 \
@@ -16,7 +17,7 @@ build/main.pdf: FORCE | build
 	  --output-directory=build \
 	  --interaction=nonstopmode \
 	  --halt-on-error \
-	main.tex
+	GraphDarstAufg1.tex
 
 build:
 	mkdir -p build
