@@ -1,10 +1,13 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import math
 
-x_messung, y_messung = np.genfromtxt("python/tabel.txt", unpack=True)
-plt.plot(1/x_messung, 1/y_messung, "k." , label="G-B")
-plt.xlim(0, 10)
-plt.ylim(0, 10)
+g, b = np.genfromtxt("python/tabel2.txt", unpack=True)
+plt.plot(1/g,1/b, "k." , label="G-B")
+plt.xlim(0, 0.02)
+plt.ylim(0,0.025)
+plt.xlabel(r'$  \symup{1/G}$')
+plt.ylabel(r'$  \symup{1/B}$')
 
 plt.tight_layout()
 

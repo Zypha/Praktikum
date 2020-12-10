@@ -29,7 +29,7 @@ Fur sechs verschiedene Gegenstandsweiten $g$ wurde die Bildweite $b$ bestimmt
 \end{tabular}
 \end{table}
 
-\subsection{a) verschiedene Brennweiten}
+\subsection{verschiedene Brennweiten}
  Berechnen Sie fur die sechs verschiedenen Kombinationen die Brennweite ¨ f der
 dunnen Linse. Verwenden sie die Linsengleichung. Berechnen Sie aus den sechs ¨
 Brennweiten den Mittelwert, die Standardabweichung und den Fehler des Mittelwertes.
@@ -74,13 +74,32 @@ Die Standardabweichung resultiert indirekt aus dem Mittelwert. Hierfür wird fol
 \sigma_f = \sqrt{\frac{1}{n-1} \sum_{i=1}^n (f_i - \bar{f})^2}
 \end{equation}
 
-Aus (\ref{tab:loesung}) und (\ref{eq:delta}) nimmt man die Werte und erhält folgendes Ergenis.
+Aus (\ref{tab:loesung}), (\ref{eq:delta}) und $n=6$ nimmt man die Werte und erhält folgendes Ergenis.
 
 \begin{equation}
 \sigma_f = \SI{2.04}{\milli\meter}
 \end{equation}
 
+\paragraph{Fehler des Mittelwertes} \mbox{} \\
+\begin{multicols}{2}
+    \begin{equation}
+    \label{eq:Fehler}
+    \increment \bar{f} = \sqrt{\frac{1}{n(n-1)} \sum_{i=1}^n (f_i - \bar{f})^2}
+    \end{equation}\break
+    \begin{equation}
+    \label{eq:Fehlerkurz}
+    \increment \bar{f} =\frac{s}{\sqrt{n}}
+    \end{equation}
+\end{multicols}{2}
+
+Analog zur Stadnartabweichung lassen sich nun die Messwerte und $n=6$ einsetzen wodurch man mit der Formel \eqref{eq:Fehler} oder \eqref{eq:Fehlerkurz}
+ den entsprechenden Fehler des Mittelwelwertes bekommt.
+\begin{equation}
+\increment \bar{f}= \SI{0.83}{\milli\meter}
+\end{equation}
 \newpage
+
+\subsection{Diagramm}
 \paragraph{G-B Diagramm} \mbox{} \\
 
 \begin{figure}
@@ -89,3 +108,29 @@ Aus (\ref{tab:loesung}) und (\ref{eq:delta}) nimmt man die Werte und erhält fol
    \caption{G-B Diagramm}
    \label{fig:G-B}
 \end{figure}
+
+Die kleinen Werte resultieren aus der inversen Betrachtung des Brennwertes $f$.
+
+\paragraph{Lineare Regression} \mbox{}\\
+
+\begin{equation}
+\label{eq:LR}
+\hat{f}_k = bx_k +a 
+\end{equation}
+
+\begin{align*}
+&\hat{f}_k   &&\text{- Vorhergesagter Wert auf dem Kriterium $y$ für den k-ten Messwert} \\
+&x_k  \hspace{1cm} &&\text{- k-ter Messwert auf dem Prädiktor x}  \\
+&b  &&\text{- Regressionsgewicht, Steigung der Regressionsgeraden } \\
+&a &&\text{- $y$ - Achsenabschnitt der Regressionsgeraden} 
+\end{align*}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{build/plot3.pdf},
+   \caption{G-B Diagramm}
+   \label{fig:G-BL}
+\end{figure}
+
+\subsection{Vergleich der Ergebnisse}
+Die gegebenen Werte und der Graph der Linearen Regression liegen nahe beeiander und im Berecih der Stadnardabweichung. 
