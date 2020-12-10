@@ -4,8 +4,14 @@ all: build/GraphDarst.pdf
 build/plot1.pdf: python/plot1.py header-matplotlib.tex matplotlibrc python/tabel.txt| build
 		TEXINPUTS=$$(pwd): python python/plot1.py
 
+build/plot2.pdf: python/plot2.py header-matplotlib.tex matplotlibrc python/tabel.txt| build
+		TEXINPUTS=$$(pwd): python python/plot2.py
+
+
+
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/GraphDarst.pdf: build/plot1.pdf 
+build/GraphDarst.pdf: build/plot1.pdf \
+						build/plot2.pdf 
 
 build/GraphDarst.pdf: FORCE | build
 	  TEXINPUTS=build: \

@@ -1,0 +1,91 @@
+\section{Brennweite}
+In einem Experiment soll die Brennweite einer Linse bestimmt werden. Hierzu
+wird eine Lampe im Abstand $g$ vor die dunne Linse ¨ gestellt. Auf der anderen
+Seite der Linse befindet sich im Abstand b ein Schirm, der solange verschoben
+wird, bis ein scharfes Bild zu sehen ist. Die Brennweite $f$ der Linse läßt sich dann
+durch die Linsengleichung berechnen.
+
+\begin{equation}
+    \label{eq:Brennweite}
+        \frac{1}{f}=\frac{1}{g} + \frac{1}{b}
+\end{equation}
+
+
+Fur sechs verschiedene Gegenstandsweiten $g$ wurde die Bildweite $b$ bestimmt
+
+\begin{table}
+\centering
+\label{tab:lösunga}
+\begin{tabular}{c c}
+    Gegenstandsweite $g [\symup{mm}]$ & Bildweite $b [\symup{mm}]$\\
+    \midrule
+    60 &285 \\
+    80 &142 \\
+    100& 117\\
+    110& 85 \\
+    120& 86 \\
+    125& 82 \\
+    \bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{a) verschiedene Brennweiten}
+ Berechnen Sie fur die sechs verschiedenen Kombinationen die Brennweite ¨ f der
+dunnen Linse. Verwenden sie die Linsengleichung. Berechnen Sie aus den sechs ¨
+Brennweiten den Mittelwert, die Standardabweichung und den Fehler des Mittelwertes.
+
+\paragraph{Ansatz und Lösung} \mbox{} \\
+Mithilfe der gegeben Linsengleichung (\ref{eq:Brennweite}) lässt sich das entsprehcende $f$ bestimmen.
+
+ \begin{table}
+\centering
+\begin{tabular}{c c c}
+    Gegenstandsweite $g [\symup{mm}]$ & Bildweite $b [\symup{mm}]$ & Brennweite $f [\symup{mm}]$\\
+    \midrule
+    60 &285 &49.57\\
+    80 &142 &51.17\\
+    100& 117&53.92\\
+    110& 85 &47.95\\
+    120& 86 &50.10\\
+    125& 82 &49.52\\
+    \bottomrule
+    
+\end{tabular}
+\caption{Brennweite folgend aus Gegenstandsweite und Bildweite}
+\label{tab:loesung}
+\end{table}
+
+\paragraph{Mittelwert} \mbox{} \\
+Anschließend wird der Mittelwert berechnet durch entsprechende Formel.
+\begin{equation}
+\Delta f = \frac{1}{n} \sum_{i=1}^n f_i 
+\end{equation}
+
+Wobei $n$ hier die Anzahl der vorgenommmen Messungen ist. Die restlichen Werte einsetzen ergibt den Mittelwert, welcher lautet
+\begin{equation}
+\label{eq:delta}
+\Delta f=\SI{50.2}{\milli\meter}.
+\end{equation}
+
+\paragraph{Standardabweichung} \mbox{} \\
+Die Standardabweichung resultiert indirekt aus dem Mittelwert. Hierfür wird folgende Forme bennötigt.
+
+\begin{equation}
+\sigma_f = \sqrt{\frac{1}{n-1} \sum_{i=1}^n (f_i - \bar{f})^2}
+\end{equation}
+
+Aus (\ref{tab:loesung}) und (\ref{eq:delta}) nimmt man die Werte und erhält folgendes Ergenis.
+
+\begin{equation}
+\sigma_f = \SI{2.04}{\milli\meter}
+\end{equation}
+
+\newpage
+\paragraph{G-B Diagramm} \mbox{} \\
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{build/plot2.pdf},
+   \caption{G-B Diagramm}
+   \label{fig:G-B}
+\end{figure}
