@@ -1,0 +1,76 @@
+\newpage
+\section{Absorbationsgesetz}
+
+Als erstes gil tes die Messunsciherheit für $N$ zu berchnen. Dafür bedient man sich dem Absorbationsgesetz
+
+\begin{equation}
+    N=N_0 * e^{-\mu d}
+\end{equation}
+
+ und der Angabe zur Berechnung der Unischerheit
+
+\begin{equation}
+\label{eq:fehler}
+   \Delta N= \sqrt{N}
+\end{equation}
+
+Diese angewandt auf die Daten ergibt folgende Tablle
+
+\begin{table}
+    \centering
+    \caption{$d-N$ Diagramm mit Fehler}
+    \begin{tabular}{c c c}
+        \toprule
+        d [cm] & N [1/60s] & Fehler ($=\sqrt{N}$)\\
+        \midrule
+        0.1 & 7565  & 86.97 \\
+        0.2 & 6907  & 83.10 \\
+        0.3 & 6214  & 78.82 \\
+        0.4 & 5531  & 74.37 \\
+        0.5 & 4942  & 70.29 \\
+        1.0 & 2652  & 51.49 \\
+        1.2 & 2166  & 46.54 \\
+        1.5 & 1466  & 38.28 \\
+        2.0 & 970  & 31.14 \\
+        3.0 & 333  & 18.24 \\
+        4.0 & 127  & 11.26 \\
+        5.0 & 48  & 6.92 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{$lin lin$ Darstellung} 
+Die lineare Darstellung auf beiden Achsen des Vorgangs sieht wie folgt aus.
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{build/plot4.pdf},
+   \caption{$lin-lin$ Darstellung der Absorbation - linear}
+   \label{fig:linlin}
+\end{figure}
+
+Der Fehler wurde analog zur Anweisung mit \eqref{fehler} berechnet und dem Plot hinzugefügt.
+
+\subsection{$lin log$ Darstellung} 
+Hier wird jeweils von der kompletten $y-Achse$ der natürliche Logarithmus genommen um eine entsprechende halblogarithmische Darstellung zu erhalten.
+Die Dicke wird durch die $x-Achse$ beschrieben und bleibt unverändert.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{build/plot5.pdf},
+   \caption{$lin-log$ Darstellung der Absorbation -halblogarithmisch}
+   \label{fig:linlin}
+\end{figure}
+
+
+\subsection{Absorptionskoeffizienten}
+Da man nun die Art und das Aussehen der Werte kennt, kann man sie versuchen mit einer Funktion durch einen $curvefit$ zu beschreiben. 
+Dadurch erhält man einen ungefähren Zahlenwert für den Absorptionskoeffizienten. Dieser liegt laut Python bei den $\mu = 1.139$, bzw mit diesem Wert wurde der folgende Graph dargstellt.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{build/plot6.pdf},
+   \caption{$lin-log$ Darstellung der Absorbation}
+   \label{fig:linlin}
+\end{figure}
+
